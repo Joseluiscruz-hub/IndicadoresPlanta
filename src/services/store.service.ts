@@ -214,8 +214,40 @@ export class StoreService implements OnDestroy {
   private detectHardware() {
     if (typeof navigator !== 'undefined') {
       const ua = navigator.userAgent.toLowerCase();
-      const isTV = ua.includes('smart-tv') || ua.includes('webos') || ua.includes('tizen') || ua.includes('bravia');
-      if (isTV || (navigator.hardwareConcurrency || 4) < 4) {
+      const platform = navigator.platform?.toLowerCase() || '';
+
+      // Detección robusta de TVs y sistemas embebidos de baja gama
+      const isTV = ua.includes('smart-tv') ||
+                   ua.includes('webos') ||
+                   ua.includes('tizen') ||
+                   ua.includes('bravia') ||
+                   ua.includes('netcast') ||  // LG antiguos
+                   ua.includes('maple') ||    // Samsung antiguos
+                   ua.includes('roku') ||
+                   ua.includes('vizio') ||
+                   ua.includes('hisense') ||
+                   ua.includes('tcl') ||
+                   ua.includes('philips') ||
+                   ua.includes('panasonic') ||
+                   ua.includes('samsung') && ua.includes('tv') ||  // Samsung TVs
+                   ua.includes('lg') && ua.includes('tv') ||        // LG TVs
+                   platform.includes('tv') ||
+                   platform.includes('linux') && ua.includes('chromium');  // Algunos TVs embebidos
+
+      // Detección de navegadores antiguos o de baja performance
+      const isOldBrowser = ua.includes('msie') ||
+                           ua.includes('trident') ||
+                           (ua.includes('chrome') && !ua.includes('chromium/7') && parseInt(ua.match(/chrome\/(\d+)/)?.[1] || '0') < 70) ||
+                           (ua.includes('firefox') && parseInt(ua.match(/firefox\/(\d+)/)?.[1] || '0') < 60);
+
+      // Detección de hardware limitado
+      const lowConcurrency = (navigator.hardwareConcurrency || 4) < 4;
+      const lowResolution = (screen.width * screen.height) < 1920 * 1080;  // Menos de Full HD
+
+      // Detección de memoria baja (si disponible)
+      const lowMemory = (navigator as any).deviceMemory && (navigator as any).deviceMemory < 2;  // Menos de 2GB
+
+      if (isTV || isOldBrowser || lowConcurrency || lowResolution || lowMemory) {
         this.performanceMode.set('eco');
       } else {
         this.performanceMode.set('high');
