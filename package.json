@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "ng serve",
     "build": "ng build",
-    "deploy": "ng build --base-href /dashboard-operativo-industrial/ && npx ngh --dir dist/browser",
+    "deploy": "ng build --base-href /IndicadoresPlanta/ && npx ngh --dir dist/browser",
     "preview": "ng serve --configuration=production"
   },
   "dependencies": {
