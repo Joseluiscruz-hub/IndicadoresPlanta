@@ -23,4 +23,8 @@ export class DashboardComponent {
     const m = Math.floor(minutes % 60);
     return `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}`;
   }
+
+  forceGlobalSync() {
+    this.store.forceSync();
+  }
 }

@@ -48,6 +48,12 @@
       <div class="text-slate-400 text-[10px] sm:text-xs uppercase font-semibold tracking-wide">
         {{ store.lastUpdate() | date:'EEEE, d MMM' }}
       </div>
+      <button
+        (click)="forceGlobalSync()"
+        class="mt-1 sm:mt-0 sm:ml-2 px-2 py-1 bg-coke-red hover:bg-red-700 text-white text-xs font-bold rounded shadow-sm transition-colors"
+        title="Sincronizar globalmente con la base de datos">
+        🔄 SYNC
+      </button>
     </div>
   </header>
 
@@ -451,3 +457,4 @@
     </div>
   </footer>
 </div>
+

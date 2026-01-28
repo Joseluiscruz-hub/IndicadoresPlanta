@@ -1,6 +1,6 @@
 import { Injectable, signal, computed, OnDestroy, effect, untracked } from '@angular/core';
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, onValue, set } from 'firebase/database';
+import { getDatabase, ref, onValue, set, get } from 'firebase/database';
 
 // --- FIREBASE CONFIGURATION ---
 const FIREBASE_CONFIG = {
@@ -257,6 +257,20 @@ export class StoreService implements OnDestroy {
 
   togglePerformanceMode() {
     this.performanceMode.update(m => m === 'high' ? 'eco' : 'high');
+  }
+
+  forceSync() {
+    if (this.isFirebaseConfigured && this.db) {
+      const dataRef = ref(this.db, 'dashboard_state');
+      get(dataRef).then(snapshot => {
+        const val = snapshot.val();
+        if (val) {
+          this.isRemoteUpdate = true;
+          this.applyState(val);
+          this.isRemoteUpdate = false;
+        }
+      }).catch(err => console.error('Force sync failed', err));
+    }
   }
 
   private initPersistenceAndSync() {
