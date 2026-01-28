@@ -1,0 +1,19 @@
+<!-- Navigation Toggle -->
+<!-- Hidden by default (opacity-0) to keep dashboard clean. Hover bottom-right to see. -->
+<div class="fixed bottom-4 right-4 z-50 opacity-0 hover:opacity-100 transition-opacity duration-500">
+  <button (click)="toggleView()" 
+    class="bg-femsa-dark text-white p-3 rounded-full shadow-lg hover:scale-105 transition-transform border-2 border-femsa-red flex items-center gap-2">
+    @if (currentView() === 'dashboard') {
+      <span class="font-bold">⚙️ Admin</span>
+    } @else {
+      <span class="font-bold">📊 Dashboard</span>
+    }
+  </button>
+</div>
+
+<!-- View Router -->
+@if (currentView() === 'dashboard') {
+  <app-dashboard></app-dashboard>
+} @else {
+  <app-admin></app-admin>
+}

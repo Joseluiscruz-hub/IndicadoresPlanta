@@ -1,0 +1,32 @@
+{
+  "name": "dashboard-operativo-industrial",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "ng serve",
+    "build": "ng build",
+    "deploy": "ng build --base-href /dashboard-operativo-industrial/ && npx ngh --dir dist/browser",
+    "preview": "ng serve --configuration=production"
+  },
+  "dependencies": {
+    "@angular/build": "^21.1.0",
+    "@angular/cli": "^21.1.0",
+    "@angular/common": "^21.1.0",
+    "@angular/compiler": "^21.1.0",
+    "@angular/compiler-cli": "^21.1.0",
+    "@angular/core": "^21.1.0",
+    "@angular/forms": "^21.1.1",
+    "@angular/platform-browser": "^21.1.0",
+    "@google/genai": "^1.38.0",
+    "firebase": "^12.8.0",
+    "rxjs": "^7.8.2",
+    "tailwindcss": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "angular-cli-ghpages": "^3.0.2",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Dashboard Operativo Industrial",
+  "description": "Un tablero operativo industrial de alta fidelidad con visualización de datos en tiempo real y un panel de administración. Incluye métricas de seguridad, cumplimiento de fleteo y eficiencia de tripulaciones.",
+  "requestFramePermissions": []
+}
