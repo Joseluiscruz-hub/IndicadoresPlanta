@@ -45,4 +45,4 @@ Para desarrollo local:
 
 ## Créditos
 
-Diseñado siguiendo los lineamientos visuales industriales y paleta de colores corporativa (Femsa Red).
+Diseñado siguiendo los lineamientos visuales industriales y paleta de colores corporativa ( Red).
