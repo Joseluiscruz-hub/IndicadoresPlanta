@@ -192,7 +192,7 @@ export class StoreService implements OnDestroy {
   });
 
   // --- Persistence ---
-  private readonly STORAGE_KEY = 'dashboard_db_state_v4_kof';
+  private readonly STORAGE_KEY = 'dashboard_db_state_v4_orsted';
   private isRemoteUpdate = false; 
   private db: any;
   private isFirebaseConfigured = false;
