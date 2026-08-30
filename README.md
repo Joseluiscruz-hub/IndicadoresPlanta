@@ -1,4 +1,4 @@
-# 🏭 FemTech Suite Planta — Dashboard Operativo Industrial
+# 🏭 Orsted Corp Tech Suite Planta — Dashboard Operativo Industrial
 
 [![Angular](https://img.shields.io/badge/Angular-21-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -6,7 +6,7 @@
 [![Gemini](https://img.shields.io/badge/Google_Gemini-2.5_Flash-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white)](https://ai.google.dev/)
 [![D3.js](https://img.shields.io/badge/D3.js-v7-F9A03C?style=for-the-badge&logo=d3dotjs&logoColor=white)](https://d3js.org/)
 
-**FemTech Suite Planta** es un dashboard web para concentrar, visualizar y administrar indicadores operativos de planta desde una sola interfaz. Está orientado a pantallas de monitoreo, TVs industriales, computadoras y dispositivos móviles, con un diseño responsivo y un modo de rendimiento adaptativo para equipos con recursos limitados.
+**Orsted Corp Tech Suite Planta** es un dashboard web para concentrar, visualizar y administrar indicadores operativos de planta desde una sola interfaz. Está orientado a pantallas de monitoreo, TVs industriales, computadoras y dispositivos móviles, con un diseño responsivo y un modo de rendimiento adaptativo para equipos con recursos limitados.
 
 El proyecto transforma múltiples métricas de operación en una vista ejecutiva con información de **seguridad, capacidad de almacén, fleteo, tiempos de estancia, tiempo perdido de montacargas, mermas, disciplina operativa, objetivos de bono y desempeño de tripulaciones**.
 
@@ -128,7 +128,7 @@ El análisis está diseñado para identificar:
 
 ## 📊 Administración de datos
 
-FemTech Suite Planta incluye una vista administrativa desde la cual es posible:
+Orsted Corp Tech Suite Planta incluye una vista administrativa desde la cual es posible:
 
 - Actualizar manualmente indicadores de seguridad.
 - Actualizar niveles de almacén.
@@ -199,7 +199,7 @@ En modo ECO se reducen animaciones, sombras, gradientes, transiciones y otros ef
 ## 🧩 Arquitectura
 
 ```text
-FemTechSuitePlanta/
+Orsted-Corp-TechSuitePlanta/
 ├── src/
 │   ├── app.component.ts
 │   ├── app.component.html
@@ -257,8 +257,8 @@ D3.js, SheetJS y Tailwind se cargan actualmente desde CDN en `index.html`.
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/Joseluiscruz-hub/FemTechSuitePlanta.git
-cd FemTechSuitePlanta
+git clone https://github.com/Joseluiscruz-hub/Orsted-Corp-TechSuitePlanta.git
+cd Orsted-Corp-TechSuitePlanta
 ```
 
 ### 2. Instalar dependencias
@@ -292,7 +292,7 @@ npm run preview
 npm run deploy
 ```
 
-> **Nota de despliegue:** el script `deploy` actual utiliza el `base-href` `/IndicadoresPlanta/`. Si este repositorio se despliega directamente como `FemTechSuitePlanta` en GitHub Pages, debe ajustarse el `base-href` al nombre/ruta real del sitio antes del despliegue.
+> **Nota de despliegue:** el script `deploy` actual utiliza el `base-href` `/IndicadoresPlanta/`. Si este repositorio se despliega directamente como `Orsted-Corp-TechSuitePlanta` en GitHub Pages, debe ajustarse el `base-href` al nombre/ruta real del sitio antes del despliegue.
 
 ---
 
