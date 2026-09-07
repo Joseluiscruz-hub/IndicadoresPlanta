@@ -1,1 +1,1 @@
-PLACEHOLDER
+file:///tmp/c.ts
