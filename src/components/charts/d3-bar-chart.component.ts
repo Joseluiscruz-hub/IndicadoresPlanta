@@ -1,1 +1,1 @@
-file:///tmp/c.ts
+@/workspace/hardening-files/mcp_chart_body.ts
